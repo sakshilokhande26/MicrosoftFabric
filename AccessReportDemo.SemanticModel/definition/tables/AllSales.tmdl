@@ -1,0 +1,98 @@
+table AllSales
+	lineageTag: 6ff4883c-2843-401d-98cb-d84f92187962
+	sourceLineageTag: [dbo].[AllSales]
+
+	column SaleID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a89ea529-2619-4f23-a7c7-82d6994a53f2
+		sourceLineageTag: SaleID
+		summarizeBy: count
+		sourceColumn: SaleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Division
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: c126dfed-2b80-40ed-a22f-a05450273693
+		sourceLineageTag: Division
+		summarizeBy: none
+		sourceColumn: Division
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 6c8fd01c-4df5-41ea-a7af-c28457e29ea6
+		sourceLineageTag: ProductName
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 68c23eba-2b11-4398-9ffc-663bebd41e0f
+		sourceLineageTag: Amount
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column SaleDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: a2f208c7-4288-44d2-9bf2-99b56a352b53
+		sourceLineageTag: SaleDate
+		summarizeBy: none
+		sourceColumn: SaleDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 7a99824b-cbea-4eda-badb-c5bc2494ef1f
+		sourceLineageTag: CustomerName
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesRep
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: c47dc345-acd1-422a-a4f0-2f169bf21346
+		sourceLineageTag: SalesRep
+		summarizeBy: none
+		sourceColumn: SalesRep
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerEmail
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 199eb4a5-2887-427a-baf5-9da9d355faf6
+		sourceLineageTag: CustomerEmail
+		summarizeBy: none
+		sourceColumn: CustomerEmail
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AllSales = entity
+		mode: directLake
+		source
+			entityName: AllSales
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
