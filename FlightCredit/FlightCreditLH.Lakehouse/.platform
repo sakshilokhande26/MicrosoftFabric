@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "FlightCreditLH"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4927d133-33b3-8d99-4fc4-6a2d051ef925"
+  }
+}

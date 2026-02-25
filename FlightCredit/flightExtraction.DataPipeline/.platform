@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "flightExtraction"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "dce31fa7-7879-a2a2-4ac6-b851b50f6c29"
+  }
+}
