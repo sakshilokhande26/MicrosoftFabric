@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "ingest froms3"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b75c79c2-eb15-83f1-484a-2025e94addbd"
+  }
+}

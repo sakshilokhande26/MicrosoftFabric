@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Raw_1",
+    "path": "/Files",
+    "target": {
+      "type": "AmazonS3",
+      "amazonS3": {
+        "connectionId": "c1c86e2b-837e-40bc-b2d9-b2579bbf3e1b",
+        "location": "s3://pharmadatasetkp",
+        "subpath": "/Raw"
+      }
+    }
+  }
+]
